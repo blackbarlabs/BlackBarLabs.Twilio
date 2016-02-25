@@ -55,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BlackBarLabs.Web\BlackBarLabs.Web.csproj">
+      <Project>{5bb52391-2704-44c0-bc8a-dbbe31498814}</Project>
+      <Name>BlackBarLabs.Web</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BlackBarLabs.Twilio\BlackBarLabs.Twilio.csproj">
       <Project>{de5131a2-2a01-4111-9809-b570f264cb08}</Project>
       <Name>BlackBarLabs.Twilio</Name>
