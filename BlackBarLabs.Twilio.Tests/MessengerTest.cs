@@ -14,7 +14,7 @@ namespace BlackBarLabs.Twilio.Tests
             var fromNumber = System.Configuration.ConfigurationManager.AppSettings["Twilio.TestFromNumber"];
             var toNumber = System.Configuration.ConfigurationManager.AppSettings["Twilio.TestToNumber"];
             var messenger = new Messenger(accountSid, authToken);
-            messenger.SendSmsMessage(fromNumber, toNumber, "Check us out at http://www.eastfive.com");
+            messenger.SendSmsMessage(fromNumber, toNumber, "Here is the test. http://www.eastfive.com");
         }
     }
 }

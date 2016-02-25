@@ -48,6 +48,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\UnverifiedPhoneNumberException.cs" />
+    <Compile Include="Exceptions\InvalidPhoneNumberException.cs" />
+    <Compile Include="Exceptions\SmsUnauthorizedException.cs" />
     <Compile Include="Messenger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

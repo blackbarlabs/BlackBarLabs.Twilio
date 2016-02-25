@@ -1,4 +1,5 @@
-﻿using Twilio;
+﻿using BlackBarLabs.Twilio.Exceptions;
+using Twilio;
 
 namespace BlackBarLabs.Twilio
 {
@@ -21,7 +22,16 @@ namespace BlackBarLabs.Twilio
             if (message.RestException != null)
             {
                 var error = message.RestException.Message;
-                // handle the error ...
+                if (message.RestException.Status == "400")
+                {
+                    if (message.RestException.Code == "21608")
+                        throw new UnverifiedPhoneNumberException(message.RestException.Message);
+                    if (message.RestException.Code == "21211")
+                        throw new InvalidPhoneNumberException(message.RestException.Message);
+                }
+                if (message.RestException.Status == "401")
+                    throw new SmsUnauthorizedException(message.RestException.Message);
+                return false;
             }
             return true;
         }
