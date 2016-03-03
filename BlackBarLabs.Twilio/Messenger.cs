@@ -3,7 +3,7 @@ using Twilio;
 
 namespace BlackBarLabs.Twilio
 {
-    public class Messenger : Web.ISendSmsService
+    public class Messenger //: Web.ISendSmsService
     {
         private readonly string accountSid;
         private readonly string authToken;
